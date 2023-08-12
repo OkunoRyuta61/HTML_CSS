@@ -1,0 +1,184 @@
+#footer {
+  position: relative;
+  background: #EFF1F3;
+  padding: 7.0rem 0 2.0rem;
+  margin: 0;
+  @include media('sp') {
+    padding: 5.0rem 0 3.0rem;
+    .sm-row {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .sm-row > [class*="col-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+  .footer-logo {
+    position: relative;
+    font-family: $font_noto;
+    font-weight: 700;
+    font-size: 2.0rem;
+    line-height: 3.0rem;
+    color: #1A47A4;
+    @include media('sp') {
+      margin-bottom: 4.0rem;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+      outline: none;
+    }
+  }
+  .footer-nav {
+    position: relative;
+    .nav-menu {
+      position: relative;
+      display: block;
+      list-style: none;
+      padding: 0;
+      & > li {
+        position: relative;
+        &:not(:last-child) {
+          margin-bottom: 3.0rem;
+        }
+        & > a {
+          position: relative;
+          font-family: $font_noto;
+          font-size: 1.6rem;
+          font-weight: 700;
+          line-height: 2.4rem;
+          text-decoration: none;
+          outline: none;
+          color: $base_color;
+          @include media('sp') {
+            font-size: 1.5rem;
+          }
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        ul {
+          position: relative;
+          list-style: none;
+          display: block;
+          padding: 0;
+          margin-top: 1.5rem;
+          li {
+            position: relative;
+            &:not(:last-child) {
+              margin-bottom: 1.5rem;
+            }
+            a {
+              position: relative;
+              display: inline-block;
+              padding-left: 2.0rem;
+              font-family: $font_noto;
+              font-size: 1.6rem;
+              font-weight: 400;
+              line-height: 2.4rem;
+              text-decoration: none;
+              outline: none;
+              color: $base_color;
+              @include media('sp') {
+                padding-left: 1.8rem;
+                font-size: 1.5rem;
+              }
+              &:hover {
+                text-decoration: underline;
+              }
+              &::before {
+                position: absolute;
+                top: 6%;
+                left: 0;
+                content: "\f054";
+                font-family: var(--fa-style-family,"Font Awesome 6 Free");
+                font-weight: var(--fa-style,900);
+                font-size: 80%;
+                color: #1A47A4;
+                font-style: normal;
+                text-rendering: auto;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+      
+    }
+  }
+  
+  .copyright {
+    margin-top: 4.0rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: $base_color;
+    text-align: left;
+    @include media('sp') {
+      margin-top: 3.0rem;
+      text-align: center;
+    }
+  }
+}
+
+.fixed-search-toggle {
+  position: fixed;
+  top: 2.4rem;
+  left: 1.5rem;
+  font-size: 1.6rem;
+  color: #000000;
+  display: none;
+  width: fit-content;
+  text-decoration: none;
+  outline: none;
+  z-index: 997;
+  @include media('sp') {
+    display: inline-block;
+  }
+}
+
+#search-form-modal {
+  .modal-dialog {
+    max-width: 500px;
+  }
+  .modal-body {
+    padding: 2.8rem 3.0rem 3.0rem;
+    @include media('sp') {
+      padding: 1.8rem 1.5rem 2.0rem;
+    }
+  }
+}
+
+.back_to_top {
+  position: fixed;
+  bottom: 30px;
+  right: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 996;
+  @include media('sp') {
+    width: 45px;
+    right: 16px;
+    bottom: 16px;
+  }
+  img {
+    width: 100%;
+    @include media('pc') {
+      transition: all 0.4s;
+    }
+  }
+  @include media('pc') {
+    &:hover {
+      text-decoration: none;
+      img {
+        filter: drop-shadow(0 0 12px #fff);
+        -webkit-filter: drop-shadow(0 0 12px #fff);
+      }
+    }
+  }
+}
